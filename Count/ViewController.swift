@@ -9,15 +9,29 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    var count = 0
+    @IBOutlet weak var lbl01: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    @IBAction func btC(_ sender: Any) {
+        count = count + 1
+        
+        lbl01.text = "\(count)"
+    }
+   
+    @IBAction func btR(_ sender: Any) {
+    count = 0
+    lbl01.text = "\(count)"
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    
     }
 
 
